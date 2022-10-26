@@ -32,9 +32,5 @@ class biublicekedemo{
      tata.changetype("disel");
      tata.bikedetails("tata");  
 
-
-
-
-     UncaughtExceptionHandler
     }
 }
