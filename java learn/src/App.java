@@ -29,5 +29,7 @@ class biublicekedemo{
      tata.changegear(3);
      tata.changetype("disel");
      tata.bikedetails("tata");  
+
+     
     }
 }
