@@ -45,6 +45,7 @@ public class linkedlist {
         // // l1.head.next=third;
         // // System.out.println(l1.head.next.value);
         // second.next=third;
+        
         l1.insertatend(6);
         l1.insertatend(9);
         while(l1.head !=null)
@@ -57,10 +58,6 @@ public class linkedlist {
         // System.out.println(l1.head.value);
         // System.out.println(l1.head);
         //system.out.println
-          
-    
-         
-      //system.out.println()
-
+            //system.out.println()
     }
 }
