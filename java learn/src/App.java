@@ -1,3 +1,5 @@
+import java.lang.Thread.UncaughtExceptionHandler;
+
 class bike{
     int speed = 5;
     int gear = 2;
@@ -30,6 +32,9 @@ class biublicekedemo{
      tata.changetype("disel");
      tata.bikedetails("tata");  
 
-     
+
+
+
+     UncaughtExceptionHandler
     }
 }
