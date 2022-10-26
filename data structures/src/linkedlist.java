@@ -59,7 +59,8 @@ public class linkedlist {
         //system.out.println
           
     
-
+         
+        
 
     }
 }
