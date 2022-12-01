@@ -53,9 +53,9 @@ public class linkedlist {
           obj1.insert_begining(8);
           obj1.insert_begining(6);
           obj1.insert_begining(4);
-          obj1.insert_inend(5);
-          obj1.insert_inend(1);
-          obj1.delete_node(5);
+        //   obj1.insert_inend(5);
+        //   obj1.insert_inend(1);
+        //   obj1.delete_node(5);
           obj1.print_thedetails();
     }
 }
