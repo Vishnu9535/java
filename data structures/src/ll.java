@@ -36,11 +36,15 @@ public class ll {
         head=head.next;
     }
     void delete_end(){
-        Node curr=head.next;
-        while(curr.next!=null){
+        Node curr=head;
+        for(int i=0;i<1;i++){
             curr=curr.next;
         }
         curr.next=null;
+    }
+    void delete_index(int z){
+        Node curr=head;
+        if()
     }
     void print(){
         if(head==null){
@@ -60,6 +64,9 @@ public class ll {
         x1.insert_at_first(80);
         x1.insert_at_first(0);
         x1.insert_at_the_end(90);
+        x1.insert_at_the_end(30);
+        x1.insert_at_the_end(60);
+
         // x1.delete_first();
         x1.delete_end();
         x1.print();
