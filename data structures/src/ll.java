@@ -37,15 +37,18 @@ public class ll {
     }
     void delete_end(){
         Node curr=head;
-        for(int i=0;i<1;i++){
+        for(int i=0;i<3;i++){
             curr=curr.next;
         }
         curr.next=null;
     }
-    void delete_index(int z){
-        Node curr=head;
-        if()
-    }
+    // }
+    // void delete_index(int z){
+    //     Node curr=head;
+    //     while(curr!=null){
+    //         if(curr.value==null)
+    //     }
+    // }
     void print(){
         if(head==null){
             System.out.println("no elements");
