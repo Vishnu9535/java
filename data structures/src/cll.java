@@ -19,13 +19,35 @@ public class cll {
         n1.next=head;
         tail=n1;        
     }
-    void display(){
+    void delete(int value){
+        if(head.data==value){
+            head=head.next;
+            tail.next=head;
+            return;
+        }
+        if(tail.data==value){
+            Node curr=head;
+            while(curr.next!=tail){
+                curr=curr.next;
+            }
+            curr.next=head;
+            tail=curr;
+            return;
+        }
         Node curr=head;
-        while(curr!=tail){
-            System.out.println(curr.data);
+        while(curr.next.data!=value){
             curr=curr.next;
         }
-        System.out.println(curr.next.data);
+        Node x=curr.next.next;
+        curr.next=x;                                    
+    }
+    void display(){
+        Node m=head;
+        while(m!=tail){
+            System.out.println(m.data);
+            m=m.next;
+        }
+        System.out.println(m.data);
         }
     public static void main(String[] args) {
         cll x1=new cll();
@@ -33,6 +55,14 @@ public class cll {
         x1.insert_end(85);
         x1.insert_end(66);
         x1.insert_end(77);
+        x1.insert_end(1245);
+        x1.delete(66);
+        x1.delete(55);
+        x1.delete(1245);
+        x1.delete(85);
+        x1.insert_end(75);
+        x1.delete(77);
+
         x1.display();
     }
 }
