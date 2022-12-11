@@ -11,6 +11,8 @@ class oops implements car{
     }
 
     public static void main(String[] args) {
-            
+            oops x1=new oops();
+            x1.car_speed(50);
+            x1.gear(5);
         }
     }
