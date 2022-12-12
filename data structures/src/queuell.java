@@ -47,6 +47,5 @@ public class queuell {
         x1.de_queue();
         x1.de_queue();
         x1.print();
-        
     }
 }
