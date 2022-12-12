@@ -1,4 +1,4 @@
-public class stackqueue {
+public class queuell {
     Node head;
     Node tail;
     class Node{
@@ -26,5 +26,26 @@ public class stackqueue {
         }
         System.out.println("dequed item is "+head.data);
         head=head.next;
+    }
+    void print(){
+        Node curr=head;
+        if(curr==null){
+            System.out.println("nothing to print ");
+            return;
+        }
+        while(curr!=null){
+            System.out.println(curr.data);
+            curr=curr.next;
+        }
+    }
+    public static void main(String[] args) {
+        queuell x1=new queuell();
+        x1.en_queue(500);
+        x1.en_queue(25);
+        x1.en_queue(36);
+        x1.en_queue(508);
+        x1.de_queue();
+        x1.de_queue();
+        x1.print();
     }
 }
