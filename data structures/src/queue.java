@@ -36,15 +36,30 @@ public class queue {
         System.out.println(q[rear]);
         System.out.println("sucessfully added");
     }
-    void decqueue(int data){
+    void decqueue(){
       if(isempty()){
           System.out.println("its  empty");
           return;
       }
-      System.out.println(q[front]+"is dequeued");
+      if(front>rear){
+        front=-1;
+        rear=-1;
+      }
+      System.out.println(q[front]+" is dequeued");
       front++;
     }
+    void display(){
+        for(int i=front;i<=rear;i++){
+            System.out.println(q[i]);
+        }
+    }
     public static void main(String[] args) {
-        
+        queue x1=new queue(5);
+        x1.enqueue(55);
+        x1.enqueue(6);
+        x1.enqueue(85);
+        x1.enqueue(75);
+        x1.decqueue();
+        x1.display();
     }
 }
