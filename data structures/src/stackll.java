@@ -29,5 +29,9 @@ public class stackll {
         return x;
     }
     }
+    void display(){
+        Node curr=head;
+        
+    }
 }
 }
