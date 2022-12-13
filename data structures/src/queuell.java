@@ -46,6 +46,6 @@ public class queuell {
         x1.en_queue(508);
         x1.de_queue();
         x1.de_queue();
-        x1.print();
+        x1.print();vs
     }
 }
