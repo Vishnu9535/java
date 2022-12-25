@@ -26,7 +26,7 @@ class stack1{
         return z;
     }
     void full_check(){
-          if(top==capacity){
+          if(top==capacity-1){
             System.out.println("stack is full");
           }
     }
