@@ -1,3 +1,5 @@
+import java.util.*;
+
 class stack{
   char[] data;
    int size;
@@ -24,8 +26,45 @@ class stack{
     return false;
    }
 }
+void push(char c){
+    top=top+1;
+    data[top]=c;
+}
+char pop(){
+    char c=data[top];
+    top--;
+    return c;
+}
+char peek(){
+    return data[top];
+}
+}
 
 
 public class balance {
+    static String checkbalance(String par){
+        stack s1=new stack();
+      for(int i=0;i<par.length();i++){
+        char ch=par.charAt(i);
+    if(ch=='{'||ch=='['||ch=='(')
+           s1.push(ch);
+      
+    else if((!s1.is_empty())&&((s1.peek()=='{'&& ch=='}')||(s1.peek()=='('&& ch==')')||(s1.peek()=='['&& ch==']'))){
+        s1.pop();
+      }
+    }
+    if(s1.is_empty()){
+        return "balanced" ;
+    }
+    else{
+        return "no";
+    }
+    }
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String par=sc.nextLine();
+        String t=checkbalance(par);
+        System.out.println(t);
+    }
     
 }
