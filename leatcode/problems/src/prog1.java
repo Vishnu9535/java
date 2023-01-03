@@ -7,13 +7,18 @@
 // Columns 0 and 2 are sorted, but column 1 is not, so you only need to delete 1 column.
 public class prog1 {
     static int minDeletionSize(String[] strs) {
-        int m=0;
+        int delete=0;
         for(int i=0;i < strs.length;i++){
-            for(int j=0;j < strs[i].length();j++){
-                char c=strs[i].charAt(j);
+            outer:for(int j=0;j < strs[i].length();j++)
+                for(int k=j+1;k<strs[i].length();k++){
+                if(strs[i].charAt(j)>strs[i].charAt(k)){
+                    delete++;
+                    break outer;
+                }
             }
-        }
-        return m;
+            }
+            System.out.println(delete);
+        return delete;
     }
     public static void main(String[] args) {
         // char s='b';
@@ -26,7 +31,6 @@ public class prog1 {
         // }
         String[] strs=new String[]{"cba","daf","ghi"};
         String[] x={"yfb","cbv"};
-        int z=minDeletionSize(strs);
+        int z=minDeletionSize(x);
     }
 }
-
