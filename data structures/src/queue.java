@@ -17,7 +17,7 @@ public class queue {
         }
     }
     boolean isfull(){
-        if(rear==size-1){
+        if(rear==(size-1)){
             return true;
         }
         else{
