@@ -26,5 +26,7 @@ class linear{
             }
         }
         return '1';
+
+        
     }
 }
