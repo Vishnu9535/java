@@ -1,14 +1,16 @@
 import java.util.*;
 import java.math.*;
-public class gcd {
+public class daa {
     public static void main(String[] args) {
       
         int m=12;
         int n=8;
 
-        gcd a=new gcd();
+        daa a=new daa();
+        int x=a.fact(5);
+        System.out.println(x);
         // a.gcd2(m, n);
-        a.ersthonesis(7);
+        // a.ersthonesis(7);
         while(n!=0){
             int r=m%n;
             m=n;
@@ -59,4 +61,16 @@ public class gcd {
           }
          }
     }
+    public int  fact(int n){
+      int x=0;
+      if(n==0){
+           x=-1;
+           return x;
+      }
+      else{
+        return n*fact(n-1);
+      }
+      // System.out.println(x);
+      // return x;
+         }
 }
