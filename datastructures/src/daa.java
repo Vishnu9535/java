@@ -8,7 +8,7 @@ public class daa {
 
         daa a=new daa();
         int x=a.fact(5);
-        System.out.println(x);
+        // System.out.println(x);
         // a.gcd2(m, n);
         // a.ersthonesis(7);
         while(n!=0){
@@ -61,14 +61,16 @@ public class daa {
           }
          }
     }
-    public int  fact(int n){
+    public int fact(int n){
       int x=0;
       if(n==0){
            x=-1;
            return x;
       }
       else{
-        return n*fact(n-1);
+        System.out.println(fact(n-1));
+
+        return n*fact(n);
       }
       // System.out.println(x);
       // return x;
