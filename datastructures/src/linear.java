@@ -44,7 +44,6 @@ class linear{
 
             }
         }
-        
         return new int[]{-1,-1};
     }
 
