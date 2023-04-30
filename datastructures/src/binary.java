@@ -3,7 +3,7 @@ public class binary {
         binary o1=new binary();
         int[] arr={1,2,3,4,7,8};
         int target=5;
-        int result=o1.cieling(arr, target);
+        int result=o1.cieling2(arr, target);
         // int result=o1.order_egnostic(arr, target);
         System.out.println(result);
     }
@@ -71,6 +71,19 @@ public class binary {
     }
     int cieling2(int[] arr , int target){
         int start=0;
-
+        int end=arr.length-1;
+        while(start<=end){
+            int index=(start+end)/2;
+            if(arr[index]==target){
+                return arr[index];
+            }
+            else if(arr[index] > target){
+                end=index-1;
+            }
+            else{
+                start=index+1;
+            }
+        }
+        return arr[start];
     }
 }
