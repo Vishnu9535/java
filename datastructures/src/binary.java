@@ -62,12 +62,23 @@ public class binary {
             
               return -1;
 }
-    int cieling(int[] arr , int target){
+    int floor(int[] arr , int target){
         int start=0;
-        while(arr[start] < target){
-            start++;
+        int end=arr.length-1;
+        while(start<=end){
+            int index=(start+end)/2;
+            if(arr[index]==target){
+                return arr[index];
+            }
+            else if(arr[index] > target){
+                end=index-1;
+            }
+            else{
+                start=index+1;
+            }
         }
-        return arr[start];
+        return arr[end];
+    }
     }
     int cieling2(int[] arr , int target){
         int start=0;
