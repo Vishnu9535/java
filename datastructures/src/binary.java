@@ -79,7 +79,7 @@ public class binary {
         }
         return arr[end];
     }
-    }
+    
     int cieling2(int[] arr , int target){
         int start=0;
         int end=arr.length-1;
