@@ -4,8 +4,8 @@ class stack{
   char[] data;
    int size;
    int top;
-   stack(){
-    size=50;
+   stack(int size){
+    this.size=size;
      data =new char[size];
      top=-1;
    }
@@ -43,7 +43,11 @@ char peek(){
 
 public class balance {
     static String checkbalance(String par){
-        stack s1=new stack();
+        int size=par.length();
+        if(size==1){
+            return "no";
+        }
+        stack s1=new stack(size);
       for(int i=0;i<par.length();i++){
         char ch=par.charAt(i);
     if(ch=='{'||ch=='['||ch=='(')
@@ -51,6 +55,9 @@ public class balance {
       
     else if((!s1.is_empty())&&((s1.peek()=='{'&& ch=='}')||(s1.peek()=='('&& ch==')')||(s1.peek()=='['&& ch==']'))){
         s1.pop();
+      }
+      else{
+        return "no";
       }
     }
     if(s1.is_empty()){
