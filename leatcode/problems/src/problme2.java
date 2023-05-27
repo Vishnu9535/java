@@ -40,7 +40,61 @@ public class problme2 {
             display(curr.next);
         }
     }
-    public Node addTwoNumbers(Node l1, Node l2) {
+
+    public Node addTwoNumbers2(Node l1, Node l2) {
+        Node curr=l1;
+        int r1=0;
+        while(curr!=null){
+            r1=r1*10;
+            r1=r1+curr.value;
+            curr=curr.next;
+        }
+        System.out.println(r1);
+        curr=l2;
+        int r2=0;
+        while(curr!=null){
+            r2=r2*10;
+            r2=r2+curr.value;
+            curr=curr.next;
+        }
+        System.out.println(r2);
+        int re1=0;
+        while(r1>0){
+            int x=r1%10;
+            re1=re1*10+x;
+            r1=r1/10;
+        }
+        System.out.println(re1);
+        int re2=0;
+        while(r2>0){
+            int x=r2%10;
+            re2=re2*10+x;
+            r2=r2/10;
+        }  
+        System.out.println(re2);
+
+        int result=re1+re2;
+        
+        System.out.println(result);
+        Node n1=new Node(0);
+        Node c1=n1;
+        if(result>0){
+        while(result>0){
+            int data=result%10;
+            Node temp=new Node(data);
+            c1.next=temp;
+            c1=c1.next;
+            result=result/10;
+        }
+        return n1.next;
+    }
+    else{
+        return n1;
+    }
+    }
+
+
+        public Node addTwoNumbers(Node l1, Node l2) {
         Node curr=l1;
         String s1="";
         while(curr!=null){
@@ -89,14 +143,27 @@ public class problme2 {
     }
     public static void main(String[] args) {
         problme2 obj1=new problme2();
-        obj1.insert_at_the_end1(0);
+        // obj1.insert_at_the_end1(2);
         // obj1.insert_at_the_end1(4);
         // obj1.insert_at_the_end1(3);
         // obj1.insert_at_the_end2(5);
-        obj1.insert_at_the_end2(0);
+        // obj1.insert_at_the_end2(6);
         // obj1.insert_at_the_end2(4);
+        obj1.insert_at_the_end2(9);
+        obj1.insert_at_the_end1(1);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(9);
+
+
         // obj1.display(head1);
-        Node r1=obj1.addTwoNumbers(head1, head);
+        Node r1=obj1.addTwoNumbers2(head1, head);
         obj1.display(r1);
 
     }
