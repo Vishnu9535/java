@@ -1,1 +1,1 @@
-n1.next=head;
+obj1.insert_at_the_end1(0);
