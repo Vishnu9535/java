@@ -3,11 +3,15 @@ public class problme2 {
     static Node head1;
     class Node{
         int value;
+        long data;
         Node next;
-        Node(int value){
-            this.value=value;
+        Node(int i){
+            this.value=i;
             next=null;
         }
+        // public Node(long data) {
+        //     this.data=data;
+        // }
     }
     void insert_at_the_end1(int data){
         Node n1=new Node(data);
@@ -40,47 +44,65 @@ public class problme2 {
             display(curr.next);
         }
     }
+    // BigInteger reverse(BigInteger number) {
+    //     BigInteger reversed = BigInteger.ZERO;
+    //     while (number.compareTo(BigInteger.ZERO) > 0) {
+    //       reversed = reversed.multiply(BigInteger.TEN).add(number.mod(BigInteger.TEN));
+    //       number = number.divide(BigInteger.TEN);
+    //     }
+    //     return reversed;
+    //   }
+      
 
     public Node addTwoNumbers2(Node l1, Node l2) {
         Node curr=l1;
-        int r1=0;
+        long r1=0;
         while(curr!=null){
             r1=r1*10;
             r1=r1+curr.value;
             curr=curr.next;
         }
-        System.out.println(r1);
+        // System.out.println(r1);
         curr=l2;
-        int r2=0;
+        long r2=0;
         while(curr!=null){
             r2=r2*10;
             r2=r2+curr.value;
             curr=curr.next;
         }
         System.out.println(r2);
-        int re1=0;
+        long re1=0;
         while(r1>0){
-            int x=r1%10;
-            re1=re1*10+x;
+            re1=re1*10+r1%10;
             r1=r1/10;
         }
+     while(l1.value==0){
+        re1=re1*10;
+        l1=l1.next;
+     }   
+        
         System.out.println(re1);
-        int re2=0;
+        long re2=0;
         while(r2>0){
-            int x=r2%10;
-            re2=re2*10+x;
+            re2=re2*10;
+            re2=re2+r2%10;
             r2=r2/10;
         }  
+     while(l2.value==0){
+        re2=re2*10;
+        l2=l2.next;
+    }
+
         System.out.println(re2);
 
-        int result=re1+re2;
+        long result= (re1+re2);
         
         System.out.println(result);
         Node n1=new Node(0);
         Node c1=n1;
         if(result>0){
         while(result>0){
-            int data=result%10;
+            int data=(int) (result%10);
             Node temp=new Node(data);
             c1.next=temp;
             c1=c1.next;
@@ -164,7 +186,7 @@ public class problme2 {
 
         // obj1.display(head1);
         Node r1=obj1.addTwoNumbers2(head1, head);
-        obj1.display(r1);
+        // obj1.display(r1);
 
     }
 }
