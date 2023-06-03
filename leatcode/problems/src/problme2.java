@@ -3,10 +3,9 @@ public class problme2 {
     static Node head1;
     class Node{
         int value;
-        long data;
         Node next;
-        Node(int i){
-            this.value=i;
+        Node(int value){
+            this.value=value;
             next=null;
         }
         // public Node(long data) {
@@ -114,9 +113,38 @@ public class problme2 {
         return n1;
     }
     }
+    public Node addTwoNumbers0(Node l1, Node l2){
+        Node n1=new Node(0);
+        Node curr=n1;
+        int carry=0;
+        while(l1!=null || l2!=null){
+            int sum=0;
+            if(l1!=null){
+                sum=sum+l1.value;
+                l1=l1.next;
 
 
-        public Node addTwoNumbers(Node l1, Node l2) {
+                
+            }
+            if(l2!=null){
+            sum=sum+l2.value;
+            l2=l2.next;
+        }
+        sum=sum+carry;
+        carry=sum/10;
+        
+        Node x=new Node(sum % 10);
+        curr.next=x;
+        curr=curr.next;            
+        }
+        if(carry!=0){
+            Node x=new Node(carry);
+            curr.next=x;
+        }
+        return n1.next;
+    }
+
+    public Node addTwoNumbers(Node l1, Node l2) {
         Node curr=l1;
         String s1="";
         while(curr!=null){
@@ -165,28 +193,28 @@ public class problme2 {
     }
     public static void main(String[] args) {
         problme2 obj1=new problme2();
-        // obj1.insert_at_the_end1(2);
-        // obj1.insert_at_the_end1(4);
-        // obj1.insert_at_the_end1(3);
-        // obj1.insert_at_the_end2(5);
-        // obj1.insert_at_the_end2(6);
-        // obj1.insert_at_the_end2(4);
-        obj1.insert_at_the_end2(9);
-        obj1.insert_at_the_end1(1);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
-        obj1.insert_at_the_end1(9);
+        obj1.insert_at_the_end1(2);
+        obj1.insert_at_the_end1(4);
+        obj1.insert_at_the_end1(3);
+        obj1.insert_at_the_end2(5);
+        obj1.insert_at_the_end2(6);
+        obj1.insert_at_the_end2(4);
+        // obj1.insert_at_the_end2(9);
+        // obj1.insert_at_the_end1(1);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
+        // obj1.insert_at_the_end1(9);
 
 
         // obj1.display(head1);
-        Node r1=obj1.addTwoNumbers2(head1, head);
-        // obj1.display(r1);
+        Node r1=obj1.addTwoNumbers0(head, head1);
+        obj1.display(r1);
 
     }
 }
