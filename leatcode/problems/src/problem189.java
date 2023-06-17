@@ -85,7 +85,15 @@ class problem189{
         System.out.println(Arrays.toString(nums));
     }
 }
-
+public void rotatefinal(int[] nums, int k) {
+      int[] dum=new int[nums.length];
+      for(int i=0;i < k;i++){
+        dum[i]=nums[nums.length-k];
+        for(int z=i+1;k<nums.length;k++){
+            nums[i]=nums[z-1];
+        }
+      }
+}
     public static void main(String[] args) {
         int[] nums={1,2,3,4,5,6};
         int k=4;
