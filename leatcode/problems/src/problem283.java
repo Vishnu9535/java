@@ -20,7 +20,12 @@ public class problem283 {
     System.out.println(Arrays.toString(nums));
     }
     public void moveZeroes2(int[] nums) {
-    
+        int pos=0;
+        for(int i=0;i < nums.length;i++){
+            if(nums[i]!=0){
+                nums[i]
+            }
+        }
     
     }
     public static void main(String[] args) {
