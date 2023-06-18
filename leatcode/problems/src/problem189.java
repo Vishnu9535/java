@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 // function rotate2 is right ans
 class problem189{
     public void rotate(int[] nums, int k) {
@@ -86,18 +86,44 @@ class problem189{
     }
 }
 public void rotatefinal(int[] nums, int k) {
-      int[] dum=new int[nums.length];
-      for(int i=0;i < k;i++){
-        dum[i]=nums[nums.length-k];
-        for(int z=i+1;k<nums.length;k++){
-            nums[i]=nums[z-1];
-        }
+   if(k>nums.length)
+    for(int i=0;i<k;i++){
+      k=k-nums.length;
+      if(k<=nums.length){
+        break;
       }
+   }
+     System.out.println(k);
+    int temp=0;
+    for(int i=0;i<(nums.length-k)/2;i++){
+        temp=nums[i];
+        nums[i]=nums[nums.length-k-1-i];
+        nums[nums.length-k-1-i]=temp;
+    }
+     
+    int v=0;
+    for(int i=0;i<k/2;i++){
+        temp=nums[nums.length-k+v];
+        nums[nums.length-k+v]=nums[nums.length-1-v];
+        nums[nums.length-1-v]=temp;
+        v=v+1;
+    }
+    
+    
+    for(int i=0;i<(nums.length)/2;i++){
+        temp=nums[i];
+        nums[i]=nums[nums.length-1-i];
+        nums[nums.length-1-i]=temp;
+    }
+    
+
+    System.out.println(Arrays.toString(nums));
+    
 }
     public static void main(String[] args) {
-        int[] nums={1,2,3,4,5,6};
-        int k=4;
+        int[] nums={1,2};
+        int k=5;
         problem189 obj=new problem189();
-        obj.rotate2(nums, k);
+        obj.rotatefinal(nums, k);
     }
 }
