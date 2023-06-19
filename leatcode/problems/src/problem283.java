@@ -23,14 +23,17 @@ public class problem283 {
         int pos=0;
         for(int i=0;i < nums.length;i++){
             if(nums[i]!=0){
-                nums[i]
+                nums[pos]=nums[i];
+                pos++;
             }
+        }      
+        for(int i=pos;i<nums.length;i++){
+            nums[i]=0;
         }
-    
     }
     public static void main(String[] args) {
         problem283 obj1=new problem283();
-        int[] n1={0};
-        obj1.moveZeroes(n1);
+        int[] n1={0,1,0,3,12};
+        obj1.moveZeroes2(n1);
     }
 }
