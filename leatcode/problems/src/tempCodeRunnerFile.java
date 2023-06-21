@@ -1,1 +1,1 @@
-obj1.insert_at_the_end1(0);
+obj1.insert_end(6);
