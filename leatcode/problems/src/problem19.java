@@ -1,5 +1,5 @@
-public class problem876 {
-    static ListNode head;
+public class problem19 {
+     static ListNode head;
     class ListNode{
         int val;
         ListNode next;
@@ -26,25 +26,32 @@ public class problem876 {
             curr=curr.next;
         }
     }
-        public ListNode middleNode(ListNode head) {
-            ListNode curr=head;
-            int count=0;
-            while(curr!=null){
-                count+=1;
-                curr=curr.next;
-            }
-            if(count % 2 != 0){
-                count=count/2+1;
-            }
-            else{
-                count=count/2;
-                head=head.next;
-            }
-            System.out.println(count);
-            for(int i=1;i < count;i++){
-                head=head.next;
-            }
-        //     curr=head;
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode curr=head;
+        int no=0;
+        while(curr != null){
+            no=no+1;
+            curr=curr.next;
+        }
+        
+        no=no-n;
+        if(no<=0){
+            head=null;
+            return head;
+        }
+        curr=head;
+        for(int i=0;i<no-1;i++){
+            curr=curr.next;
+        }
+        ListNode temp;
+        if(curr !=null && curr.next.next!=null){
+            temp=curr.next.next;
+            curr.next=temp;
+        }
+        else{
+            curr.next=null;
+        }
+        curr=head;
         // while(curr!=null){
         //     System.out.println(curr.val);
         //     curr=curr.next;
@@ -52,13 +59,14 @@ public class problem876 {
         return head;
     }
     public static void main(String[] args) {
-        problem876 obj1=new problem876();
+        problem19 obj1=new problem19();
         obj1.insert_end(1);
         obj1.insert_end(2);
         obj1.insert_end(3);
         obj1.insert_end(4);
         obj1.insert_end(5);
-        obj1.insert_end(6);
-        obj1.middleNode(head);
+        int n=2;
+        // obj1.insert_end(6);
+        obj1.removeNthFromEnd(head, n);
     }
 }
