@@ -25,9 +25,9 @@ public class binaryinfinite {
         int end=1;
         int z=1;
         while (arr[end] < target){
-            start=end+1;
-            end=start+z+1;
-            z=z+1;
+            int nstart=end+1;
+            end=end+(end-start+1)*2;
+            start=nstart;
         }
         return new int[] {start,end};
     }
