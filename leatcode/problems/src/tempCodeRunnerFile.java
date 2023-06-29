@@ -1,1 +1,1 @@
-                    System.out.println(result[m][k]);
+   //  curr=curr.next;
