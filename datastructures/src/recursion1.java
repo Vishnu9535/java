@@ -9,7 +9,6 @@ public class recursion1 {
         }  
         System.out.println(n);
         print_numbers(n+1);
-
     }
 
 }
