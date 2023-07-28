@@ -11,12 +11,13 @@ public class problem345 {
             if (s1[i] == 'a' || s1[i] == 'e' || s1[i] == 'i' || s1[i] == 'o' || s1[i] == 'u' )
             {
              if(x != 'y'){
-                
+                char temp=s1[i];
+                s1[i]=temp;
              }
+             x=s1[i];
+             index=i;
             }
-            else{
-                s2=s2+s1[i];
-            }
+            s2=s2+s1[i];
         }
         return s2;
 
