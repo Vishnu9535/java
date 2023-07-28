@@ -106,11 +106,17 @@ public class pattern {
         }
        }
        public void pattern8(int n){
-        
+            for(int i=1;i < 2*n; i++){
+            for(int j=1;j < 2*n; j++){
+             int value= n -Math.min(Math.min(i-1, j-1) , Math.min( 2 * n-j-1,2 * n-i-1));
+             System.out.print(value+" ");
+            }
+            System.out.println();
+        }
        }
 
     public static void main(String[] args) {
     pattern obj= new pattern();
-        obj.pattern7(5);
+        obj.pattern8(4);
     }
 }
