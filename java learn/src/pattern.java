@@ -1,3 +1,4 @@
+import java.util.*;
 public class pattern {
     public void pattern0(){
     char x='*';
@@ -67,7 +68,7 @@ public class pattern {
             int space=n-i;
             System.out.print("  ".repeat(space));
             int k=2;
-            for(int j=0;j<i*2-1;j++){
+            for(int j=0;j < i*2-1;j++){
                 int no=i-j; 
                 if(no < 1){
                     no=k;
@@ -96,15 +97,20 @@ public class pattern {
         }
     }
        public void pattern7(int n){
-        for(int i=0;i<2*n-1;i++){
-            for(int j=0;j< 2*n-1;j++){
-                
+        for(int i=1;i < 2*n; i++){
+            for(int j=1;j < 2*n; j++){
+             int value=Math.min(Math.min(i-1, j-1) , Math.min( 2 * n-j-1,2 * n-i-1));
+             System.out.print(value+" ");
             }
+            System.out.println();
         }
+       }
+       public void pattern8(int n){
+        
        }
 
     public static void main(String[] args) {
     pattern obj= new pattern();
-        obj.pattern6(5);
+        obj.pattern7(5);
     }
 }
