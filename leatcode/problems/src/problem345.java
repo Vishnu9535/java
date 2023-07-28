@@ -1,7 +1,7 @@
 public class problem345 {
     public static void main(String[] args) {
         problem345 obj1 = new problem345();
-        System.out.println(obj1.reverseVowels2("hello"));
+        System.out.println(obj1.reverseVowels2("A man, a plan, a canal: Panama"));
     }    
     public String reverseVowels(String s) {
         char[] s1=s.toCharArray();
@@ -28,15 +28,18 @@ public class problem345 {
         if(not_vowel(arr1[start])){
             start++;
         }
-        if(not_vowel(arr1[end])){
+       else if(not_vowel(arr1[end])){
             end--;
         }
         else{
             char temp = arr1[start];
             arr1[start] = arr1[end];
             arr1[end] = temp;
+            start++;
+            end--;
         }
       }  
+      return String.copyValueOf(arr1);
     }
     public static boolean not_vowel(char c){
         if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I'|| c == 'O' || c == 'U')
@@ -45,5 +48,4 @@ public class problem345 {
         }
         return true;
     }
-
 }

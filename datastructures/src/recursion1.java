@@ -10,5 +10,7 @@ public class recursion1 {
         System.out.println(n);
         print_numbers(n+1);
     }
-
+    public static void fibonaccino(int n){
+        
+    }
 }
