@@ -1,6 +1,5 @@
 import java.util.*;
 
-import javax.print.attribute.SupportedValuesAttribute;
 class stack1{
     int top;
     int a[];
@@ -8,7 +7,7 @@ class stack1{
     stack1(int size){
         capacity=size;
         a=new int[size];
-        top=-1;
+        top=-1; 
     }
     void push(int value){
         if(top==capacity){
