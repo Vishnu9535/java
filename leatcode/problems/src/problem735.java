@@ -46,30 +46,19 @@ public class problem735 {
         stack x1 = new stack(asteroids.length);
 
         for(int i=0; i < asteroids.length;i++){
-
-            if(x1.is_empty())
-            {
+            if(x1.is_empty() || asteroids[i] > 0){
                 x1.push(asteroids[i]);
             }
-            else if((x1.seek() > 0 && asteroids[i] > 0) || (x1.seek() < 0 && asteroids[i] <0))
-            {
-                x1.push(asteroids[i]);
-            }
-       
-            else if(Math.abs(x1.seek()) == Math.abs(asteroids[i])){
+            else{
+                while(!x1.is_empty() && x1.seek() > 0 && x1.seek() < Math.abs(asteroids[i])){
                     x1.pop();
                 }
-            
-            else{
-                while((Math.abs(x1.seek()) < Math.abs(asteroids[i])) && !((x1.seek() > 0 && asteroids[i] > 0)))
-                {         
-                       
+                if(x1.is_empty() || x1.seek() < 0){
+                    x1.push(asteroids[i]);
+                } 
+                else if(x1.seek() == Math.abs(asteroids[i])){
                     x1.pop();
-                     if(x1.is_empty()){
-                        break;
-                    }  
-                }   
-                x1.push(asteroids[i]);      
+                }
             }
         }
         int r1[] =new int[top+1];
