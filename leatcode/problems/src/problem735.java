@@ -56,11 +56,11 @@ public class problem735 {
                 x1.push(asteroids[i]);
             }
        
-            else if(Math.abs(x1.seek()) == Math.abs(asteroids[i]))
+            else if(Math.abs(x1.seek()) == Math.abs(asteroids[i])){
                     x1.pop();
                 }
             
-            else {
+            else{
                 while((Math.abs(x1.seek()) < Math.abs(asteroids[i])) && !((x1.seek() > 0 && asteroids[i] > 0)))
                 {         
                        
@@ -69,7 +69,7 @@ public class problem735 {
                         break;
                     }  
                 }   
-                // x1.push(asteroids[i]);      
+                x1.push(asteroids[i]);      
             }
         }
         int r1[] =new int[top+1];
