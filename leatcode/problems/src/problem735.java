@@ -79,7 +79,7 @@ public class problem735 {
         return r1;
     }
     public static void main(String[] args) {
-        int arr1[] = {5,10,-5};
+        int arr1[] = {10,2,-3};
         problem735 obj1 = new problem735();
         int[] r1=obj1.asteroidCollision(arr1);
 
