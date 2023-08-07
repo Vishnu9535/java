@@ -1,1 +1,1 @@
-   //  curr=curr.next;
+            System.out.println(m);
