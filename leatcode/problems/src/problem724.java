@@ -7,7 +7,7 @@ public class problem724 {
         }
         int left_sum=0;
         for(int i = 0;i < nums.length ; i++){
-            
+            if(left_sum == total - nums[i] - left_sum)
         }
 
     }
