@@ -6,11 +6,11 @@ public class problem724 {
             total = total + nums[i];
         }
         int left_sum=0;
-        for(int i = 0;i < nums.length ; i++){
-            if(left_sum == total - nums[i] - left_sum){
-                return i;
+        for(int j = 0;j < nums.length ; j++){
+            if(left_sum == total - nums[j] - left_sum){
+                return j;
             }
-            left_sum += left_sum + nums[i];
+            left_sum = left_sum + nums[j];
         }
         return -1;  
     }
