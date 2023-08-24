@@ -1,7 +1,4 @@
 import java.util.List;
-
-import org.w3c.dom.Node;
-
 class problem61{
     ListNode head;
     public class ListNode{
@@ -26,7 +23,34 @@ class problem61{
             curr.next=new ListNode(data);
         }
     }
+    void print(){
+        if(head==null){
+            System.out.println("no elements");
+            return;
+        }
+        else{
+        ListNode curr=head;
+        while(curr!=null){
+            System.out.println(curr.val);
+            curr=curr.next;
+        }
+        }
+    }
+    public ListNode rotateRight(ListNode head, int k) {
+        ListNode temp = head ;
+        int length = 0;
+        while (temp != null){
+            temp = temp.next;
+        }
+        return head;
+    }
     public static void main(String[] args) {
-        
+        problem61 obj = new problem61();
+        obj.insert_begining(1);
+        obj.insert_begining(2);
+        obj.insert_begining(3);
+        obj.insert_begining(4);
+        obj.insert_begining(5);
+        obj.print();
     }
 }
