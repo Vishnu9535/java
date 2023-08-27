@@ -36,10 +36,19 @@ public class problem2215 {
         List<Integer> s2List = new ArrayList<>(s2);
         f1.add(s1List);
         f1.add(s2List);
+        for(int i =0 ; i < f1.size() ; i++){
+            for(int j = 0;j < f1.get(i).size();j++){
+                System.out.print(f1.get(i).get(j) + " ");
+            }
+            System.out.println();
+        }
         return f1;
     }
     public static void main(String[] args) {
-        int[] n1 = {1,2,3,4,5};
-        int[] n2 = {2,3,4};
+        int[] n1 = {1,2,3,4,5,5,5};
+        int[] n2 = {2,3,4,6};
+        problem2215 obj1 = new problem2215();
+        obj1.findDifference(n1,n2);
+
     }
 }
