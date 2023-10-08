@@ -16,6 +16,9 @@ public class recursion1 {
         System.out.println(n);
         // this is tail recursion 
         print_numbers(n+1);
+
+
+        
     }
     public static int fibonaccino(int n){
         if(n < 2){
