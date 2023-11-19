@@ -8,6 +8,7 @@ public class recusioneasy27 {
         // System.out.println(obj1.product_of_digits(5606));
         // obj1.concept(8);
         obj1.reverse_number(12345);
+        System.out.println(obj1.remainder(543210000, 0));
     }
     public void print_n(int n){
         if(n == 0){
@@ -74,16 +75,15 @@ public class recusioneasy27 {
         return sum;
 
     }
-    public void remainder(int n,int count){
-        if(n%10 == n){
-            return ;
+    public int remainder(int n,int count){
+        if(n==0){
+            return count;
         }
         if(n%10 == 0){
             count++;
             remainder(n/10, count);
         }
-        else if(n%10 !=0){
-            remainder(n/10, count);
-        }
+           return remainder(n/10, count);
+        
     } 
 }
