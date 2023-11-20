@@ -2,7 +2,7 @@ public class recursion1 {
     public static void main(String[] args) {
         //  recursion obj1 = new recursion();
         //  print_numbers(1);
-        //  System.out.println(fibonaccino(15));
+         System.out.println(fibonaccino(1));
                 int[] arr={1,3,5,7,9,13,15};
         int target =  16;
         int start = 0;
@@ -16,6 +16,8 @@ public class recursion1 {
         System.out.println(n);
         // this is tail recursion 
         print_numbers(n+1);
+
+
     }
     public static int fibonaccino(int n){
         if(n < 2){
