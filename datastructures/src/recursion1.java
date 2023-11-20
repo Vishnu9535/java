@@ -7,7 +7,7 @@ public class recursion1 {
         int target =  16;
         int start = 0;
         int end =arr.length-1;
-        System.out.println((binary_search(arr, target,start, end )));
+        System.out.println((fibonaccino(5)));
     }
     public static void  print_numbers(int n){
         if(n == 6){

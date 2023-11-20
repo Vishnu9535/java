@@ -62,6 +62,7 @@ public class cll {
         x1.delete(85);
         x1.insert_end(75);
         x1.delete(77);
+        x1.insert_end(5);
 
         x1.display();
     }
