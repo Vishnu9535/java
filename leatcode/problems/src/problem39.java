@@ -7,6 +7,8 @@ public class problem39 {
         List<Integer> temp =new ArrayList<>();
         back_track(candidates, target, result, temp, 0);
         return result;
+
+        
         
     }
     public static void back_track(int[] candidates,int remain,List<List<Integer>> result,List<Integer> temp,int start){
