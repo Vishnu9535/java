@@ -20,6 +20,6 @@ public class problem2438 {
     public static void main(String[] args) {
 
         problem2438 obj1 = new problem2438();
-        obj1.productQueries(2);
-    }
+        obj1.productQueries(31);
+    }   
 }
