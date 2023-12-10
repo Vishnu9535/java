@@ -61,6 +61,7 @@ public class problem39 {
                 System.out.print(value+" ");
             }
             System.out.println();
+            
         }
     }
 }
