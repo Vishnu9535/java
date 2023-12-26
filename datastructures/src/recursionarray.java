@@ -41,6 +41,19 @@ public class recursionarray {
         }
         linear_search_all(arr, index+1, target);
     }
+       public static ArrayList<Integer> find_all_index(int[] arr, int index,int target)
+       {
+        ArrayList<Integer> x1 = new ArrayList<>();
+        if(index == arr.length){
+            return x1;
+        }
+        else if (arr[index]== target){
+            x1.add(index);
+        }
+        ArrayList< Integer> add_all = find_all_index(arr,index+1,target);
+        x1.addAll(add_all);
+        return x1;
+    }
     public static void main(String[] args) {
         int[] arr = {1,4,2,8,10,12,12};
         recursionarray obj1 = new recursionarray();
@@ -48,4 +61,6 @@ public class recursionarray {
         linear_search_all(arr, 0, 12);
         System.out.println(a1);
     }
+    // without helper finction 
+ 
 }
