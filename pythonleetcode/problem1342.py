@@ -30,3 +30,6 @@ class Solution(object):
 
 obj1 = Solution()
 print(obj1.numberOfSteps(14))
+
+while(9):
+    print("10")

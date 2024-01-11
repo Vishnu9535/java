@@ -2,6 +2,7 @@ public class problem345 {
     public static void main(String[] args) {
         problem345 obj1 = new problem345();
         System.out.println(obj1.reverseVowels2("A man, a plan, a canal: Panama"));
+        int i =10;
     }    
     public String reverseVowels(String s) {
         char[] s1=s.toCharArray();

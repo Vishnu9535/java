@@ -51,8 +51,7 @@ public class problem2807 {
     public static int find_gcd(int a , int b){
         if (b == 0) {
             return a;
-        } 
-        else {
+        } else {
             return find_gcd(b, a % b);
         }
     }

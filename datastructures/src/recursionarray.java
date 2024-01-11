@@ -41,7 +41,7 @@ public class recursionarray {
         }
         linear_search_all(arr, index+1, target);
     }
-       public static ArrayList<Integer> find_all_index(int[] arr, int index,int target)
+       public ArrayList<Integer> find_all_index(int[] arr, int index,int target)
        {
         ArrayList<Integer> x1 = new ArrayList<>();
         if(index == arr.length){
@@ -58,9 +58,7 @@ public class recursionarray {
         int[] arr = {1,4,2,8,10,12,12};
         recursionarray obj1 = new recursionarray();
         // System.out.println(check_sorted(arr, 0));
-        linear_search_all(arr, 0, 12);
-        System.out.println(a1);
+        System.out.println(obj1.find_all_index(arr, 0, 12));
     }
     // without helper finction 
- 
 }

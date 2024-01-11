@@ -23,7 +23,15 @@ def groupAnagrams(arr):
             a[x] = [i]
     final = list(a.values())
     print(final)
+    z=0 
+   
 
 arr=["eat","tea","tan","ate","nat","bat"]
-groupAnagrams(arr)
+# groupAnagrams(arr)
+b=20
+a= 30
+while b:
+    a,b= b,a%b
+print(a)
+print(20%10)
 
