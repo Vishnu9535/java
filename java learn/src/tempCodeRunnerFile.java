@@ -1,3 +1,1 @@
- // if(no < 1){
-                //     no;
-                // }
+        System.out.println(result);
