@@ -66,12 +66,19 @@ public class ll {
         if(head == null || head.next == null){
             return;
         }
-        Node reverse = head;
+        Node reverse = null;
         Node curr = head.next;
         while(curr!=null){
-            
+            Node n1 = new Node(curr.data);
+            n1.next = reverse;
+            reverse = n1;
+            curr = curr.next;
         }
-
+        Node x= reverse;
+        while(x!=null){
+            System.out.println(x.data);
+            x=x.next;
+        }
 
     }
     public static void main(String[] args) {
@@ -81,7 +88,7 @@ public class ll {
         x1.insert_at_the_end(90);
         x1.insert_at_the_end(30);
         x1.insert_at_the_end(60);
-        x1.print();
+        // x1.print();
 
         x1.reverse_ll();
     }
