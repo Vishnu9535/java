@@ -62,6 +62,18 @@ public class ll {
         }
         }
     }
+    public void reverse_ll() {
+        if(head == null || head.next == null){
+            return;
+        }
+        Node reverse = head;
+        Node curr = head.next;
+        while(curr!=null){
+            
+        }
+
+
+    }
     public static void main(String[] args) {
         ll x1=new ll();
         x1.insert_at_first(80);
@@ -69,9 +81,8 @@ public class ll {
         x1.insert_at_the_end(90);
         x1.insert_at_the_end(30);
         x1.insert_at_the_end(60);
-
-        // x1.delete_first();
-        x1.delete_end();
         x1.print();
+
+        x1.reverse_ll();
     }
 }
