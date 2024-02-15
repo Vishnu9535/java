@@ -1,16 +1,28 @@
 import java.util.*;
 public class subsets {
+    static void generateSubsets(String a , String q){
+        if(a.isEmpty()){
+            System.out.println(q);
+            return;
+        }
+        generateSubsets(a.substring(1),q+a.charAt(0));
+        generateSubsets(a.substring(1),q);
+        
+    }
  public static void main(String[] args) {
-        String a = "baccappleappb";
+        String a = "abc";
         String result = "";
         // make_subsets(a,result,0);
         // skipas(a, result);
         // System.out.println(result);
         // System.out.println(skipas(a));
         // System.out.println(skipapple(a));
-        System.out.println(skipapplenotapp(a));
+        // System.out.println(skipapplenotapp(a));
+        generateSubsets(a, "");
+
 
  }   
+
  public static String make_subsets(String a,String result,int i){
         if(i == a.length()){
             return result;
@@ -61,4 +73,5 @@ static String skipapplenotapp(String s){
     }
     return s.charAt(0) + skipapplenotapp(s.substring(1));
 }
+
 }

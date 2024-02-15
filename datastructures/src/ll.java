@@ -78,18 +78,45 @@ public class ll {
         while(x!=null){
             System.out.println(x.data);
             x=x.next;
+
         }
 
     }
+    public Node reverseList(){
+        Node current=head;
+        Node previous=null;
+        Node next=null;
+        while(current!=null){
+            next=current.next;
+            current.next=previous;
+            previous=current;
+            current=next;
+        }
+        return previous;
+    }
+    void print(Node head){
+        if(head==null){
+            System.out.println("no elements");
+            return;
+        }
+        else{
+        Node curr=head;
+        while(curr!=null){
+            System.out.println(curr.data);
+            curr=curr.next;
+        }
+        }
+    }
     public static void main(String[] args) {
         ll x1=new ll();
-        x1.insert_at_first(80);
+        x1.insert_at_first(10);
         x1.insert_at_first(0);
         x1.insert_at_the_end(90);
         x1.insert_at_the_end(30);
         x1.insert_at_the_end(60);
         // x1.print();
-
-        x1.reverse_ll();
+        // x1.reverse_ll();
+        Node resu=x1.reverseList();
+        x1.print(resu);
     }
 }
