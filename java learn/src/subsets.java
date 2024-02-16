@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 public class subsets {
     static void generateSubsets(String a , String q){
@@ -9,6 +10,19 @@ public class subsets {
         generateSubsets(a.substring(1),q);
         
     }
+    static ArrayList<String> reuturnsubsets(String a , String q)
+    {
+        if(a.isEmpty()){
+            ArrayList<String> l1 = new ArrayList<>();
+            l1.add(q);
+            return l1;
+        }
+        ArrayList<String> left = reuturnsubsets(a.substring(1), q+a.charAt(0));
+        ArrayList<String> right = reuturnsubsets(a.substring(1), q);
+        left.addAll(right);
+        return left;
+
+    }
  public static void main(String[] args) {
         String a = "abc";
         String result = "";
@@ -18,7 +32,9 @@ public class subsets {
         // System.out.println(skipas(a));
         // System.out.println(skipapple(a));
         // System.out.println(skipapplenotapp(a));
-        generateSubsets(a, "");
+        // generateSubsets(a, "");
+        ArrayList<String> l1  = reuturnsubsets(a, result);
+        System.out.println(l1);
 
 
  }   
