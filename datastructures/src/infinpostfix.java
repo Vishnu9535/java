@@ -63,8 +63,9 @@ public class infinpostfix {
           else if(symbol==')'){
             while(!x1.isempty()&&x1.peek()!='('){
                 postfix=postfix+x1.pop();
+                System.out.println(posfix(postfix));
             }
-            x1.pop();
+            System.out.println(x1.pop());
         }
             else{
                 while(!(x1.isempty())&& x1.peek()!='(' && prec(symbol)>=prec(x1.peek())){
