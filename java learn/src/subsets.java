@@ -10,6 +10,26 @@ public class subsets {
         generateSubsets(a.substring(1),q);
         
     }
+    static void generateSubsets_as11(String a , String q){
+        if(a.isEmpty()){
+            System.out.println(q);
+            return;
+        }
+        generateSubsets_as11(a.substring(1),q+a.charAt(0));
+        generateSubsets_as11(a.substring(1),q); 
+        generateSubsets(a, q + (a.charAt(0)+0));
+        
+    }
+    static List<List<Integer>> generatelist_subset(int[] a){
+    List<List<Integer>> outer = new ArrayList<>();
+    outer.add(new ArrayList<>());
+    for(int i = 0; i < a.length; i++){
+        List<Integer> inner = new ArrayList<>(outer.get(i));
+    }
+    
+    return outer;
+        
+    }
     static ArrayList<String> reuturnsubsets(String a , String q)
     {
         if(a.isEmpty()){
@@ -33,10 +53,10 @@ public class subsets {
         // System.out.println(skipapple(a));
         // System.out.println(skipapplenotapp(a));
         // generateSubsets(a, "");
-        ArrayList<String> l1  = reuturnsubsets(a, result);
-        System.out.println(l1);
-
-
+        // ArrayList<String> l1  = reuturnsubsets(a, result);
+        // System.out.println(l1);
+        generateSubsets_as11(a, result);
+    
  }   
 
  public static String make_subsets(String a,String result,int i){
@@ -55,6 +75,9 @@ public class subsets {
         return ; 
     }
     char ch = a.charAt(0);
+    int asciiValue = (int) ch;
+    System.out.println("ASCII value of " + ch + " is " + asciiValue);
+    
     if(ch == 'a'){
         skipas(a.substring(1),result);
     }
