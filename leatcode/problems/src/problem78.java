@@ -16,8 +16,10 @@ public class problem78 {
             return;
         }
         subset.add(nums[index]);
+        System.out.println(index);
         make_subsets(nums,index+1, arr, subset);
         subset.remove(subset.size() - 1);
+        System.out.println(index+"hi");
         make_subsets(nums,index+1, arr, subset);
     }
     public static void make_subsets1(int[] nums, int index, List<List<Integer>> arr, List<Integer> subset) {
