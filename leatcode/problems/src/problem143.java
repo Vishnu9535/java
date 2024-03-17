@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class problem143 {
-    ListNode head;
+    static ListNode head;
         class ListNode{
             ListNode next;
             int data;
@@ -53,7 +53,7 @@ public class problem143 {
         }
     }
 
-    public void reorderList(ListNode head) {
+    public void reorderList() {
         List<Integer> x = new ArrayList<>();
         ListNode m = head;
         while (m != null) {
@@ -62,9 +62,20 @@ public class problem143 {
         }
         int end = x.size() - 1;
         int start = 0;
+        head = null;
+        head = new ListNode(x.get(start));
+        start++;
+        ListNode curr = head;
         while (start < end) {
-        
-        
+            curr.next = new ListNode(x.get(end));
+            end--;
+            curr = curr.next;
+            curr.next = new ListNode(x.get(start));
+            start++;
+            curr = curr.next;
+        }
+        if(x.size() % 2 == 0){
+            curr.next = new ListNode(start+1);
         }
     }
     public static void main(String[] args) {
@@ -73,14 +84,16 @@ public class problem143 {
         obj1.insert(2);
         obj1.insert(3);
         obj1.insert(4);
-        obj1.insert(5);
-        obj1.insert(6);
-        obj1.insert(7);
-        obj1.reverse_list();
+        // obj1.insert(5);
+        // obj1.insert(6);
+        // obj1.insert(7);
+        // obj1.reverse_list();
         // obj1.print();
-        List<Integer> x = new ArrayList<>();
-        x.add(1);
-        x.add(2);
-        System.out.println(x.get(x.size()-1));
+        // List<Integer> x = new ArrayList<>();
+        // x.add(1);
+        // x.add(2);
+        // System.out.println(x.get(x.size()-1));
+        obj1.reorderList();
+        obj1.print();
     }
 }
