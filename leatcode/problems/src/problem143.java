@@ -60,6 +60,8 @@ public class problem143 {
             x.add(m.data);
             m = m.next;
         }
+
+        
         int end = x.size() - 1;
         int start = 0;
         head = null;
