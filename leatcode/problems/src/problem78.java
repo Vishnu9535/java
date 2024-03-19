@@ -32,11 +32,12 @@ public class problem78 {
         make_subsets1(nums, index + 1, arr, subset);
         subset.remove(subset.size() - 1); // Backtrack (exclude current element)
         make_subsets1(nums, index + 1, arr, subset);
-    }
+            }
 
-    public static void main(String[] args) {
-        int[] arr = { 1, 2, 3 };
-        problem78 p78 = new problem78();
-        p78.subsets(arr);
-    }
-}
+            public static void main(String[] args) {
+                int[] arr = { 1, 2, 3 };
+                problem78 p78 = new problem78();
+                p78.subsets(arr);
+
+            }
+        }
