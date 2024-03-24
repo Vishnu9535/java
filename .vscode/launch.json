@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "packages.b.hello",
+            "projectName": "java_7ed65b78"
+        },
+        {
+            "type": "java",
+            "name": "message",
+            "request": "launch",
+            "mainClass": "packages.greeting.message",
+            "projectName": "java_7ed65b78"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "packages.greeting.hello",
+            "projectName": "java_7ed65b78"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
