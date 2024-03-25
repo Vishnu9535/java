@@ -8,6 +8,7 @@ public class pattern {
         }
         System.out.println();
      }   
+     
     }
     public void pattern1(){
         for(int i=4;i >= 0;i--){
